@@ -16,7 +16,7 @@ def segment_strip(img):
     return mask
 
 if __name__ == "__main__":
-    img = r"F:\FILAMENT\ideal1.jpg"
+    img = r"F:\FILAMENT\images\ideal1.jpg"
     image = cv2.imread(img)
     mask = segment_strip(image)
     cv2.imshow("Segmented Strip", mask)
