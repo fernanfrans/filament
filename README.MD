@@ -1,31 +1,33 @@
 # Rule-Based Computer Vision Quality Assessment for Recycled 3D-Printer Filament
 
-## Steps In Evaluating the Filament
-1. Input Acquisition
-    - Objective: Capture filament images 
-2. Image Preprocessing 
-    - Objective: Isolate filament from background
-        a. convert image to grayscale
-        b. apply thresholding to obtain binary mask
-        c. Noise removal
-        d. Retain big island 
-        d. hole filling
-3. Filament Continuity Verification 
-    - Objective: Ensure the filament is physically continuous
-4. Measurement Extraction 
-    - Objective: Obtain measuremnts of the filament
-        a. skeleton extraction 
-        b. diameter measurement
-            i. mean diameter
-            ii. diameter standard deviation 
-            iii. local diameter variation
-        c. maximum straightness deviation
-        d. RMS deviation
-5. Evaluation 
-    - Objective: Evaluate filament quality using predefined manufacturing constraints
-    - Metrics: 
-        a. mean diameter
-        b. diameter standard deviation
-        c. maximum local diameter change
-        d. straightness deviation
-6. Output and Visualization
+## Steps in Evaluating the Filament
+
+### 1. Image Preprocessing
+**Objective:** Isolate the filament from the background.
+
+- **a. Image acquisition**
+- **b. Convert the image to grayscale**
+- **c. Apply thresholding** to obtain a binary mask
+- **d. Noise removal**
+- **e. Retain the largest connected component**
+- **f. Hole filling**
+
+### 2. Measurement Extraction
+**Objective:** Obtain quantitative measurements of the filament.
+
+- **a. Skeleton extraction**
+- **b. Diameter measurement**
+  - **i. Mean diameter**
+  - **ii. Diameter standard deviation**
+  - **iii. Local diameter variation**
+- **c. Maximum straightness deviation**
+- **d. Root Mean Square (RMS) deviation**
+
+### 3. Evaluation
+**Objective:** Evaluate filament quality using predefined manufacturing constraints.
+
+**Metrics:**
+- **a. Mean diameter**
+- **b. Diameter standard deviation**
+- **c. Maximum local diameter change**
+- **d. Straightness deviation**
