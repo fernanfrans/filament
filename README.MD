@@ -16,10 +16,10 @@
 **Objective:** Obtain quantitative measurements of the filament.
 
 - **a. Skeleton extraction**
-- **b. Diameter measurement**
-  - **i. Mean diameter**
-  - **ii. Diameter standard deviation**
-  - **iii. Local diameter variation**
+- **b. Width measurement**
+  - **i. Mean Width**
+  - **ii. Width standard deviation**
+  - **iii. Local Width variation**
 - **c. Maximum straightness deviation**
 - **d. Root Mean Square (RMS) deviation**
 

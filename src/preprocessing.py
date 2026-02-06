@@ -4,8 +4,13 @@ import numpy as np
 
 
 def processing_steps(image_path):
+    """
+    Objective: Isolate the filament from the background.
+    """
     # Step 1: Image Acquisition and Display
     image = cv2.imread(image_path)
+    if image is None:
+        raise ValueError(f"Could not read image at {image_path}")
 
     # Step 2: Grayscale Conversion
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
