@@ -4,20 +4,20 @@ import cv2
 
 
 if __name__ == "__main__":
-    image_path = "F:\FILAMENT\images\i.jpg"
+    image_path = r"F:\FILAMENT\images\sample3.jpg"
     # 1: preprocessing of the filament image
     preprocessed_filament = processing_steps(image_path)
     
     # 2: measuring Extraction
-    measurements = measurement_extraction(preprocessed_filament, PIXEL_TO_CM=0.0264583333)  # Example conversion factor
+    measurements = measurement_extraction(preprocessed_filament, PIXEL_TO_CM=0.012180187739431858)  # Example conversion factor
     print("Measurements:", measurements)
 
     # 3: Evaluation
     
     
     # # Display the processed filament
-    # cv2.imshow("Processed Filament", preprocessed_filament)
-    # # cv2.imwrite("F:\FILAMENT\images\processed_filament.jpg", preprocessed_filament)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
+    cv2.imshow("Processed Filament", preprocessed_filament)
+    cv2.imwrite("F:\FILAMENT\images\sample_filament.jpg", preprocessed_filament)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
     
