@@ -3,7 +3,7 @@ def evaluation_filament(measurement):
     results = {
 
         # Mean diameter tolerance (less strict)
-        'mean_width': 1.60 <= measurement['mean_width'] <= 1.90,
+        'mean_width': 1.65 <= measurement['mean_width'] <= 1.85,
 
         'std_width': measurement['std_width'] <= 0.30,
 

@@ -5,7 +5,7 @@ import cv2
 
 
 if __name__ == "__main__":
-    image_path = r"F:\FILAMENT\images\ideal4.jpg"
+    image_path = r"F:\FILAMENT\images\sample3.jpg"
     # 1: preprocessing of the filament image
     preprocessed_filament = processing_steps(image_path)
     
@@ -19,6 +19,8 @@ if __name__ == "__main__":
     for metric, value in measurements.items():
         print(f'{metric}: {value:.2f} mm')
     print(f"The filament {image_path}: {'PASS' if overall_pass else 'FAIL'}")
+    for metric, value in results.items():
+        print(f'{metric}: {value}')
     
     
     # # # Display the processed filament
